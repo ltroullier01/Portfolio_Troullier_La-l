@@ -1,0 +1,41 @@
+---
+import type { GetStaticPaths, Page } from 'astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/projets/PageBanner.astro';
+import PostCard from '../../components/projets/PostCard.astro';
+import Pagination from '../../components/projets/Pagination.astro';
+import { getPublishedPosts, type Post } from '../../lib/posts';
+import { site } from '../../site.config';
+
+export const getStaticPaths = (async ({ paginate }) => {
+    const posts = await getPublishedPosts();
+    return paginate(posts, { pageSize: site.postsPerPage });
+}) satisfies GetStaticPaths;
+
+interface Props {
+    page: Page<Post>;
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout
+    title="Projets"
+    description="Projets académiques et personnels en génie électrique, systèmes embarqués et robotique."
+>
+    <PageBanner
+        eyebrow=""
+        title="Projets & Réalisations"
+        sub=""
+    />
+
+    <main class="min-h-screen bg-[#141518] text-neutral-100">
+        <div class="mx-auto max-w-[1200px] px-8 py-12">
+            <div class="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+                {page.data.map((post, i) => <PostCard post={post} index={i} />)}
+            </div>
+
+            <Pagination currentPage={page.currentPage} lastPage={page.lastPage} base="/projets" />
+        </div>
+    </main>
+</BaseLayout>

@@ -1,9 +1,8 @@
 ---
-title: 'Shipping Fast Static Sites'
-description: 'Why Kepler ships almost no JavaScript, and how Astro keeps pages fast by default.'
-pubDate: 2026-07-01
-tags: ['Performance', 'Astro']
-author: 'Kepler Team'
+title: 'Banc d’asservissement d’une MCC'
+description: 'BLABLABLA'
+pubDate: 2025-12-20
+author: 'Troullier Laël'
 ---
 
 Speed is a feature. A theme that looks great but loads slowly still loses. Kepler

@@ -1,14 +1,14 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { slugify } from './posts';
 
-export type Project = CollectionEntry<'work'>;
+export type Project = CollectionEntry<'experiences'>;
 
 /**
  * 公開プロジェクトを表示順で返す。
  * order 昇順 → 同値なら year 降順。draft は本番ビルドでのみ除外。
  */
 export async function getPublishedProjects(): Promise<Project[]> {
-	const projects = await getCollection('work', ({ data }) =>
+	const projects = await getCollection('experiences', ({ data }) =>
 		import.meta.env.PROD ? !data.draft : true,
 	);
 	return projects.sort((a, b) => a.data.order - b.data.order || b.data.year - a.data.year);

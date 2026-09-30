@@ -1,7 +1,7 @@
 ---
-title: 'Designing with Navy and Orange'
-description: 'How a strict two-hue palette keeps the Kepler theme bold, cohesive, and easy to customize.'
-pubDate: 2026-06-14
+title: 'Rénovation Flipper'
+description: 'blabla'
+pubDate: 2024-06-01
 tags: ['Design']
 author: 'Kepler Team'
 ---

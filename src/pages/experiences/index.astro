@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageBanner from '../../components/projets/PageBanner.astro';
+import ProjectCard from '../../components/experiences/ProjectCard.astro';
+import { getPublishedProjects } from '../../lib/projects';
+
+const projects = await getPublishedProjects();
+---
+
+<BaseLayout
+    title="Expériences"
+    description="Parcours professionnel, stages industriels et projets personnels en génie électrique et systèmes embarqués."
+>
+    <PageBanner
+        eyebrow=""
+        title="Expériences"
+        sub=""
+    />
+
+    <main class="min-h-screen bg-[#141518] text-neutral-100">
+        <div class="mx-auto max-w-[1200px] px-8 py-12">
+            <div id="project-grid" class="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+                {projects.map((project, i) => <ProjectCard project={project} index={i} />)}
+            </div>
+        </div>
+    </main>
+</BaseLayout>

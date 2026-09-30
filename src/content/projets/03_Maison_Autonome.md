@@ -1,9 +1,8 @@
 ---
-title: 'Writing Markdown That Scales'
-description: 'Frontmatter conventions, tagging, and structure that keep a growing blog maintainable.'
-pubDate: 2026-07-05
-tags: ['Content', 'Tutorial']
-author: 'Kepler Team'
+title: 'Maison autonome en energie'
+description: 'Chef de projet pour la réalisation de l’installation électrique d’une maison autonome énergie'
+pubDate: 2026-06-01
+author: 'Troullier Laël'
 ---
 
 A blog with five posts is easy. A blog with five hundred needs conventions. Here

@@ -33,14 +33,14 @@ offset shadows and an orbit motif.
 
 Three presets, one design system — same tokens, typefaces, and components throughout.
 
-| Blog | Portfolio |
+| Projets | Experiences |
 | ---- | --------- |
-| [![Blog list](docs/screenshots/blog.png)](https://astro-kepler.pages.dev/blog/) | [![Portfolio grid](docs/screenshots/work.png)](https://astro-kepler.pages.dev/work/) |
+| [![Projets list](docs/screenshots/blog.png)](https://astro-kepler.pages.dev/projets/) | [![Experiences grid](docs/screenshots/work.png)](https://astro-kepler.pages.dev/experiences/) |
 | Content Collections, tags, pagination, reading time, RSS | Filterable project grid with per-project case studies |
 
 | Article | Case study |
 | ------- | ---------- |
-| [![Blog post](docs/screenshots/blog-post.png)](https://astro-kepler.pages.dev/blog/designing-with-navy-and-orange/) | [![Case study](docs/screenshots/case-study.png)](https://astro-kepler.pages.dev/work/meridian-store/) |
+| [![Projet detail](docs/screenshots/blog-post.png)](https://astro-kepler.pages.dev/projets/designing-with-navy-and-orange/) | [![Experience detail](docs/screenshots/case-study.png)](https://astro-kepler.pages.dev/experiences/meridian-store/) |
 | MDX, Shiki highlighting, prev/next navigation | Meta block, tech tags, long-form case-study body |
 
 Full-text search (`/search`) works across posts and case studies via [Pagefind](https://pagefind.app).
@@ -71,7 +71,7 @@ pnpm preview    # preview the production build (search works here, not in dev)
 Then make it yours:
 
 1. Edit **`src/site.config.ts`** — site name, production URL, description, OGP, social handles.
-2. Replace the demo content in **`src/content/blog/`** and **`src/content/work/`** with your own.
+2. Replace the demo content in **`src/content/projets/`** and **`src/content/experiences/`** with your own.
 3. Deploy the `dist/` output to any static host (the demo runs on Cloudflare Pages).
 
 > **Note:** search relies on a static index generated at build time, so it only works
@@ -82,18 +82,18 @@ Then make it yours:
 ```
 src/
 ├─ site.config.ts        # ← edit this first: site name, URL, OGP, social
-├─ content.config.ts     # blog & work collection schemas (typed frontmatter)
+├─ content.config.ts     # projets & experiences collection schemas (typed frontmatter)
 ├─ content/
-│  ├─ blog/              # ← your posts (.md / .mdx)
-│  └─ work/              # ← your projects (.md / .mdx, case-study body)
+│  ├─ projets/           # ← your posts (.md / .mdx)
+│  └─ experiences/       # ← your projects (.md / .mdx, case-study body)
 ├─ pages/                # routing (index = landing page)
-│  ├─ blog/              # list (paginated) + [slug] detail
+│  ├─ projets/           # list (paginated) + [slug] detail
 │  ├─ tags/              # all tags + per-tag listing
-│  ├─ work/              # grid (filterable) + [slug] case study
+│  ├─ experiences/       # grid (filterable) + [slug] case study
 │  ├─ search.astro       # Pagefind search UI
 │  └─ rss.xml.ts         # RSS feed
 ├─ layouts/              # BaseLayout, PostLayout, CaseStudyLayout
-├─ components/           # Header, Footer, Seo, landing/, blog/, work/
+├─ components/           # Header, Footer, Seo, landing/, projets/, experiences/
 └─ styles/global.css     # Tailwind import + design tokens (@theme) + prose
 
 docs/design/             # design handoff (source of truth — do not edit)
@@ -130,11 +130,11 @@ Colors, fonts, shadows, and radii are defined as CSS variables in the `@theme` b
 
 ## Writing content
 
-Add a Markdown or MDX file to `src/content/blog/` or `src/content/work/`. Frontmatter is
+Add a Markdown or MDX file to `src/content/projets/` or `src/content/experiences/`. Frontmatter is
 validated against the schema in `content.config.ts`, so typos fail the build instead of
 shipping broken pages.
 
-**Blog post** (`src/content/blog/my-post.md`):
+**Projet post** (`src/content/projets/my-post.md`):
 
 ```yaml
 ---
@@ -147,7 +147,7 @@ draft: false # true → excluded from the production build
 ---
 ```
 
-**Project** (`src/content/work/my-project.md`):
+**Experience** (`src/content/experiences/my-project.md`):
 
 ```yaml
 ---

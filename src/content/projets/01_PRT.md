@@ -1,9 +1,8 @@
 ---
-title: 'From Blog to Portfolio'
-description: 'One design system, three presets — how Kepler reuses the same tokens across landing pages, blogs, and portfolios.'
-pubDate: 2026-07-08
-tags: ['Design', 'Tutorial']
-author: 'Kepler Team'
+title: 'PRT IA'
+description: 'Chef de projet pour la réalisation de l’installation électrique d’une maison autonome énergie'
+pubDate: 2027-01-20
+author: 'Troullier Laël'
 ---
 
 The hardest part of a multi-purpose theme is coherence. A landing page, a blog,

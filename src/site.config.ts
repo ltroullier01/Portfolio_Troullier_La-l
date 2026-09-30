@@ -4,32 +4,21 @@
  * テーマ内部（src/components 以下）はこの値を参照するだけで、ハードコードしない。
  */
 export const site = {
-  /** サイト名。<title> のテンプレートやロゴ、RSS タイトルに使う */
-  name: 'Kepler',
-  /** トップページなどタイトル未指定時のフルタイトル */
-  title: 'Kepler — The versatile Astro theme',
-  /** タイトルテンプレート。%s に各ページの title が入る */
-  titleTemplate: '%s — Kepler',
-  /** 既定の meta description。ページ側で上書き可能 */
-  description: 'The versatile Astro starter for blogs, portfolios, and landing pages.',
-  /** 本番 URL（末尾スラッシュなし）。デプロイ先に合わせて変更する */
-  url: 'https://astro-kepler.pages.dev',
-  /** コンテンツ言語 */
-  locale: 'en',
-  /** 既定の著者。記事 frontmatter で上書き可能 */
-  author: 'Kepler Team',
-  /**
-   * 既定の OGP 画像（サイトルート基準の絶対パス）。
-   * 用意できない場合は undefined のままでよい（og:image を出力しない）。
-   */
-  defaultOgImage: undefined as string | undefined,
-  /** SNS ハンドル。空文字なら該当タグを出力しない */
-  social: {
-    twitter: '@astro',
-    github: 'https://github.com/kpab/astro-kepler',
-  },
-  /** ブログ一覧の1ページあたり記事数 */
+  name: 'Laël Troullier',
+  author: 'Laël Troullier',
   postsPerPage: 6,
+  title: 'Laël Troullier — Ingénieur Génie Électrique & Systèmes Embarqués',
+  titleTemplate: '%s | Laël Troullier',
+  description: 'Portfolio de projets et expériences en systèmes embarqués, IoT et génie électrique.',
+  url: 'https://portfolio-troullier-lael.vercel.app/', // ton URL finale
+  locale: 'fr_FR',
+  defaultOgImage: '/og-image.png', // une image dans ton dossier public/
+  social: {
+    // Laisse vide si non utilisé au lieu de tout effacer
+    twitter: '',
+    github: 'https://github.com/ltroullier01',
+    linkedin: 'https://www.linkedin.com/in/la%C3%ABl-troullier-644a87257',
+  },
 };
 
 export type SiteConfig = typeof site;

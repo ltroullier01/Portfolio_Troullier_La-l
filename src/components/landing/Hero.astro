@@ -1,136 +1,144 @@
 ---
-// LP Hero — docs/design/kepler-landing.html の HERO セクションに忠実に
-const avatars = [
-	{ initials: 'JK', class: 'bg-orange text-cloud' },
-	{ initials: 'MA', class: 'bg-cloud text-navy -ml-2.5' },
-	{ initials: 'RS', class: 'bg-orange-bright text-cloud -ml-2.5' },
-];
+// Hero — Portfolio
+const skills = ['STM32 & Microcontrôleurs', 'C / C++', 'CAN Bus / SPI / I2C', 'LoRaWAN & IoT', 'ROS 2 / Linux', 'MATLAB & Simulink'];
 ---
 
-<section class="bg-linear-155 from-navy to-navy-deep text-cloud">
-	<header
-		id="top"
-		class="relative mx-auto grid max-w-[1200px] items-center gap-10 px-8 pt-18 pb-10 lg:grid-cols-[1.05fr_.95fr]"
-	>
-		<!-- color glows -->
-		<span
-			class="pointer-events-none absolute -top-[90px] -right-[70px] z-0 size-[660px] bg-radial from-orange/55 to-transparent to-62%"
-		></span>
-		<span
-			class="pointer-events-none absolute -bottom-40 -left-[100px] z-0 size-[560px] bg-radial from-[rgb(96_165_250/0.45)] to-transparent to-64%"
-		></span>
-		<!-- floating stickers -->
-		<span
-			class="absolute top-14 left-[44%] z-1 size-[22px] rounded-md bg-orange [--r:18deg] animate-drift"
-		></span>
-		<span
-			class="absolute top-50 left-1.5 z-1 size-4 rounded-full bg-cloud [--r:0deg] animate-drift-alt"
-		></span>
+<section class="relative bg-gradient-to-b from-[#1f2026] via-[#18191e] to-[#141518] text-neutral-100 overflow-hidden">
+    <header
+        id="top"
+        class="relative mx-auto grid max-w-[1200px] items-center gap-10 px-8 pt-18 pb-12 lg:grid-cols-[1.1fr_.9fr]"
+    >
+        <!-- Halos lumineux d'ambiance plus doux -->
+        <span
+            class="pointer-events-none absolute -top-[80px] -right-[60px] z-0 size-[620px] bg-radial from-orange-500/20 via-orange-500/5 to-transparent blur-2xl"
+        ></span>
+        <span
+            class="pointer-events-none absolute -bottom-32 -left-[100px] z-0 size-[500px] bg-radial from-amber-500/15 via-transparent to-transparent blur-2xl"
+        ></span>
 
-		<div class="relative z-2">
-			<span
-				class="inline-flex items-center gap-2 rounded-full bg-orange px-3.5 py-[7px] text-[13px] font-bold tracking-[0.01em] text-cloud"
-				>✦ Astro 7 &nbsp;·&nbsp; 100 Lighthouse</span
-			>
-			<h1
-				class="mt-5 text-5xl leading-[0.98] font-bold tracking-[-0.03em] text-cloud md:text-[70px]"
-			>
-				One template.<br />Every idea in <span class="relative whitespace-nowrap text-orange-bright"
-					>orbit<svg
-						viewBox="0 0 220 20"
-						width="100%"
-						height="16"
-						class="absolute -bottom-2 left-0"
-						preserveAspectRatio="none"
-						aria-hidden="true"
-						><path
-							d="M4 13 C60 4 160 4 216 11"
-							stroke="var(--color-orange)"
-							stroke-width="5"
-							fill="none"
-							stroke-linecap="round"></path></svg
-					></span
-				>.
-			</h1>
-			<p class="mt-6.5 max-w-[460px] text-[19px] leading-[1.55] text-sky">
-				The versatile Astro starter for blogs, portfolios, and landing pages. Ship a fast,
-				beautiful site in an afternoon — no build headaches, no bloat.
-			</p>
-			<div class="mt-8 flex flex-wrap gap-3.5">
-				<a
-					href="#pricing"
-					class="rounded-full bg-orange px-7 py-[15px] font-bold text-cloud shadow-pop-white transition-[transform,box-shadow] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[7px_7px_0_var(--color-cloud)]"
-					>Start building →</a
-				>
-				<a
-					href="#showcase"
-					class="rounded-full border-2 border-cloud bg-cloud px-7 py-[15px] font-bold text-navy transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5"
-					>See it live</a
-				>
-			</div>
-			<div class="mt-8.5 flex items-center gap-3.5 text-sm font-medium text-sky-mist">
-				<div class="flex">
-					{
-						avatars.map((a) => (
-							<span
-								class:list={[
-									'flex size-8.5 items-center justify-center rounded-full border-2 border-navy text-[13px] font-bold',
-									a.class,
-								]}
-							>
-								{a.initials}
-							</span>
-						))
-					}
-				</div>
-				<span>Loved by <strong class="text-cloud">12,000+</strong> builders</span>
-			</div>
-		</div>
+        <div class="relative z-2">
+            <!-- Badge spécialité -->
+            <span
+                class="inline-flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-3.5 py-[6px] text-[13px] font-semibold tracking-wide text-orange-400 backdrop-blur-md"
+            >
+                <span class="size-1.5 rounded-full bg-orange-500"></span>
+                Systèmes Embarqués & Électronique
+            </span>
 
-		<!-- ORBIT GRAPHIC -->
-		<div class="relative z-2 flex aspect-square items-center justify-center">
-			<div
-				class="absolute h-[88%] w-[88%] rounded-full border-2 border-dashed border-white/40 animate-orbit-spin"
-			>
-				<span
-					class="absolute -top-[9px] left-1/2 -ml-[9px] size-[18px] rounded-full bg-orange shadow-[0_0_0_4px_rgb(249_115_22/0.3)]"
-				></span>
-			</div>
-			<div
-				class="absolute h-[62%] w-[62%] rounded-full border-2 border-white/30 animate-orbit-spin-rev"
-			>
-				<span
-					class="absolute -bottom-[7px] left-1/2 -ml-[7px] size-3.5 rounded bg-cloud"
-				></span>
-			</div>
-			<div
-				class="relative flex h-[40%] w-[40%] items-center justify-center rounded-[26px] bg-orange shadow-pop-lg"
-			>
-				<span
-					class="absolute h-5 w-11 -rotate-[28deg] rounded-full border-[3px] border-cloud"
-				></span>
-				<span class="size-4 rounded-full bg-cloud"></span>
-			</div>
-			<span class="absolute top-[8%] right-[10%] text-[26px] text-orange">✦</span>
-			<span class="absolute bottom-[10%] left-[6%] text-xl text-cloud">✦</span>
-		</div>
-	</header>
+            <!-- Nom -->
+            <h1
+                class="mt-4 text-5xl leading-[1.05] font-bold tracking-tight text-white md:text-[58px]"
+            >
+                Laël Troullier
+            </h1>
 
-	<!-- LOGO STRIP -->
-	<div class="mx-auto max-w-[1200px] px-8 pt-2 pb-16">
-		<p
-			class="mb-5.5 text-center text-[13px] font-bold tracking-[0.14em] text-white/60 uppercase"
-		>
-			Powering sites for teams at
-		</p>
-		<div class="flex flex-wrap items-center justify-center gap-11">
-			{
-				['Northwind', 'Lumen', 'Craftly', 'Peakform', 'Studio 9'].map((name) => (
-					<span class="font-display text-[22px] font-bold whitespace-nowrap text-white/80">
-						{name}
-					</span>
-				))
-			}
-		</div>
-	</div>
+            <!-- Sous-titre hiérarchisé -->
+            <h2
+                class="mt-2 text-2xl font-semibold tracking-tight text-orange-500 md:text-3xl"
+            >
+                Ingénieur en Génie Électrique
+            </h2>
+
+            <p class="mt-5 max-w-[480px] text-[17px] leading-[1.65] text-neutral-300">
+                Étudiant en 5ᵉ année à l'INSA Strasbourg. Passionné par l'électronique, la programmation bas niveau, les bus industriels et la robotique.
+            </p>
+
+            <!-- Boutons d'action -->
+            <div class="mt-8 flex flex-wrap gap-4">
+                <a
+                    href="/projets"
+                    class="rounded-full bg-orange-500 px-6 py-3 font-semibold text-white shadow-md shadow-orange-500/20 transition-all hover:bg-orange-600 hover:-translate-y-0.5"
+                >
+                    Voir mes projets →
+                </a>
+                <a
+                    href="/cv.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="rounded-full border border-neutral-600/70 bg-neutral-800/80 px-6 py-3 font-semibold text-neutral-200 transition-all hover:border-orange-500/60 hover:bg-neutral-700/80 hover:-translate-y-0.5"
+                >
+                    Consulter mon CV
+                </a>
+            </div>
+
+            <!-- Badge statut recherche -->
+            <div class="mt-8 flex items-center gap-3 text-sm font-medium text-neutral-300">
+                <span class="flex size-2.5 relative">
+                    <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+                    <span class="relative inline-flex size-2.5 rounded-full bg-emerald-500"></span>
+                </span>
+                <span>À la recherche d'un PFE (Projet de Fin d'Études) — Février 2027</span>
+            </div>
+        </div>
+
+        <!-- VISUEL PUCE MCU ÉPURÉE & ORBITES -->
+        <div class="relative z-2 flex aspect-square items-center justify-center">
+            <!-- Anneau externe en pointillé -->
+            <div
+                class="absolute h-[84%] w-[84%] rounded-full border border-dashed border-neutral-600/50 animate-orbit-spin"
+            >
+                <span
+                    class="absolute -top-[7px] left-1/2 -ml-[7px] size-3.5 rounded-full bg-orange-500 shadow-[0_0_10px_#f97316]"
+                ></span>
+            </div>
+
+            <!-- Anneau intermédiaire -->
+            <div
+                class="absolute h-[62%] w-[62%] rounded-full border border-neutral-600/40 animate-orbit-spin-rev"
+            >
+                <span
+                    class="absolute -bottom-[5px] left-1/2 -ml-[5px] size-2.5 rounded-full bg-neutral-300"
+                ></span>
+            </div>
+
+            <!-- Boîtier Microcontrôleur (MCU) épuré -->
+            <div
+                class="relative flex size-32 items-center justify-center rounded-2xl border border-orange-500/30 bg-[#252730] p-4 shadow-xl shadow-black/30"
+            >
+                <!-- Broches gauches -->
+                <div class="absolute -left-2 top-3 bottom-3 flex flex-col justify-between">
+                    <span class="h-1 w-2 rounded-l bg-orange-500/80"></span>
+                    <span class="h-1 w-2 rounded-l bg-orange-500/80"></span>
+                    <span class="h-1 w-2 rounded-l bg-orange-500/80"></span>
+                    <span class="h-1 w-2 rounded-l bg-orange-500/80"></span>
+                </div>
+                <!-- Broches droites -->
+                <div class="absolute -right-2 top-3 bottom-3 flex flex-col justify-between">
+                    <span class="h-1 w-2 rounded-r bg-orange-500/80"></span>
+                    <span class="h-1 w-2 rounded-r bg-orange-500/80"></span>
+                    <span class="h-1 w-2 rounded-r bg-orange-500/80"></span>
+                    <span class="h-1 w-2 rounded-r bg-orange-500/80"></span>
+                </div>
+
+                <!-- Cœur avec uniquement "MCU" -->
+                <div class="flex items-center justify-center">
+                    <span class="font-mono text-2xl font-bold tracking-widest text-neutral-100">
+                        MCU
+                    </span>
+                </div>
+            </div>
+
+            <!-- Repères graphiques légers -->
+            <span class="absolute top-[12%] right-[14%] text-base text-orange-500/50 font-mono">01</span>
+            <span class="absolute bottom-[14%] left-[12%] text-sm text-neutral-500 font-mono">&lt;/&gt;</span>
+        </div>
+    </header>
+
+    <!-- BANDEAU DOMAINES & TECHNOLOGIES -->
+    <div class="mx-auto max-w-[1200px] border-t border-white/5 px-8 pt-8 pb-16">
+        <p
+            class="mb-6 text-center text-[12px] font-bold tracking-[0.18em] text-neutral-400 uppercase"
+        >
+            Domaines & Technologies Clés
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            {
+                skills.map((skill) => (
+                    <span class="rounded-lg border border-neutral-700/60 bg-neutral-800/60 px-4 py-2 text-xs font-medium text-neutral-200 backdrop-blur-sm transition-colors hover:border-orange-500/50">
+                        {skill}
+                    </span>
+                ))
+            }
+        </div>
+    </div>
 </section>

@@ -2,20 +2,23 @@
 import Logo from './Logo.astro';
 
 const links = [
-    { href: '/blog', label: 'Projets' },
-    { href: '/work', label: 'Expériences' },
+    { href: '/projets', label: 'Projets' },
+    { href: '/experiences', label: 'Expériences' },
 ];
 ---
 
 <nav
     id="site-nav"
-    class="sticky top-0 z-50 border-b-[3px] border-orange bg-[#18181b]/95 backdrop-blur-xl transition-shadow duration-250"
+    class="sticky top-0 z-50 border-b border-orange-500/40 bg-[#111215]/90 backdrop-blur-md transition-all duration-200"
 >
     <div class="mx-auto flex max-w-[1200px] items-center gap-8 px-8 py-4">
         <Logo />
-        <div class="ml-auto flex gap-7 text-[15px] font-semibold">
+        <div class="ml-auto flex gap-8 text-[15px] font-semibold">
             {links.map((link) => (
-                <a href={link.href} class="text-sky hover:text-orange transition-colors">
+                <a
+                    href={link.href}
+                    class="text-neutral-300 transition-colors duration-150 hover:text-orange-500"
+                >
                     {link.label}
                 </a>
             ))}
@@ -27,7 +30,7 @@ const links = [
     const nav = document.getElementById('site-nav');
     const onScroll = () => {
         if (!nav) return;
-        nav.style.boxShadow = window.scrollY > 8 ? '0 6px 20px rgb(15 30 66 / 0.25)' : 'none';
+        nav.style.boxShadow = window.scrollY > 8 ? '0 10px 30px -10px rgba(0, 0, 0, 0.5)' : 'none';
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();

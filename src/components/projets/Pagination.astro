@@ -6,7 +6,7 @@ interface Props {
 	base?: string;
 }
 
-const { currentPage, lastPage, base = '/blog' } = Astro.props;
+const { currentPage, lastPage, base = '/projets' } = Astro.props;
 
 const href = (n: number) => (n === 1 ? `${base}` : `${base}/${n}`);
 const pages = Array.from({ length: lastPage }, (_, i) => i + 1);

@@ -1,9 +1,8 @@
 ---
-title: 'Upcoming Features (Draft)'
-description: 'A preview of what is next for Kepler — dark mode, OG image generation, and more.'
-pubDate: 2026-07-10
-tags: ['Release']
-author: 'Kepler Team'
+title: 'Chambre connectée'
+description: 'Domotisation de ma chambre'
+pubDate: 2026-08-01
+author: 'Laël Troullier'
 draft: true
 ---
 

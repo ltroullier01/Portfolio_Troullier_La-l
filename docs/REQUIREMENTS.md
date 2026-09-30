@@ -1,3 +1,4 @@
+  - [x] ポートフォリオプリセット（experiences コレクション・グリッド＋カテゴリフィルタ・CaseStudyLayout）
 # astro-kepler 要件
 
 ## 背景・目的

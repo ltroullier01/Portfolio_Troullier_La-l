@@ -1,9 +1,8 @@
 ---
-title: 'Welcome to Kepler'
-description: 'Kepler is a versatile Astro theme that covers blogs, portfolios, and landing pages with one cohesive design system.'
-pubDate: 2026-06-02
-tags: ['Astro', 'Release']
-author: 'Kepler Team'
+title: 'Robot Holonome'
+description: 'BLABLABALBA'
+pubDate: 2027-01-22
+author: 'Troullier Laël'
 ---
 
 Kepler is a starter theme for [Astro](https://astro.build) built around a single
@@ -29,4 +28,4 @@ CSS variables.
 > Good defaults, easy overrides. That is the whole philosophy.
 
 Start by editing `src/site.config.ts`, drop your first post into
-`src/content/blog/`, and you are off.
+`src/content/projets/`, and you are off.

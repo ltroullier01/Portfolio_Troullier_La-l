@@ -1,6 +1,6 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 
-export type Post = CollectionEntry<'blog'>;
+export type Post = CollectionEntry<'projets'>;
 
 /** タグ・パス用の slug 化。空白→ハイフン、英数とハイフンのみに正規化 */
 export function slugify(value: string): string {
@@ -22,7 +22,7 @@ export function readingTime(body: string | undefined): number {
  * draft は本番ビルド（PROD）でのみ除外し、開発時は下書きも見える。
  */
 export async function getPublishedPosts(): Promise<Post[]> {
-	const posts = await getCollection('blog', ({ data }) =>
+	const posts = await getCollection('projets', ({ data }) =>
 		import.meta.env.PROD ? !data.draft : true,
 	);
 	return posts.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());

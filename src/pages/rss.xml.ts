@@ -7,7 +7,7 @@ export async function GET(context: APIContext) {
 	const posts = await getPublishedPosts();
 
 	return rss({
-		title: `${site.name} — Blog`,
+		title: `${site.name} — Projets`,
 		description: site.description,
 		// astro.config の site を使う。未設定時はフォールバック
 		site: context.site ?? site.url,
@@ -15,7 +15,7 @@ export async function GET(context: APIContext) {
 			title: post.data.title,
 			description: post.data.description,
 			pubDate: post.data.pubDate,
-			link: `/blog/${post.id}/`,
+			link: `/projets/${post.id}/`,
 			categories: post.data.tags,
 			author: post.data.author ?? site.author,
 		})),

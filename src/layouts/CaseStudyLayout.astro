@@ -19,14 +19,14 @@ const facts = [
 ---
 
 <BaseLayout title={title} description={description} type="article">
-	<article data-pagefind-body data-pagefind-filter="type:Work">
+	<article data-pagefind-body data-pagefind-filter="type:Experiences">
 		<header class="border-b-2 border-line bg-paper">
 			<div class="mx-auto max-w-[860px] px-6 pt-16 pb-10">
 				<a
-					href="/work"
+					href="/experiences"
 					class="inline-flex items-center gap-1 text-sm font-bold text-orange-deep hover:text-orange"
 				>
-					← Back to work
+					← Back to experiences
 				</a>
 
 				<div class="mt-6 flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.1em] text-orange-deep">
@@ -105,7 +105,7 @@ const facts = [
 		next && (
 			<nav class="mx-auto max-w-[860px] px-6 pb-20" aria-label="Next project">
 				<a
-					href={`/work/${next.id}`}
+					href={`/experiences/${next.id}`}
 					class="group flex items-center justify-between gap-4 rounded-card border-2 border-ink bg-cloud p-6 shadow-pop-sm transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-pop"
 				>
 					<span>

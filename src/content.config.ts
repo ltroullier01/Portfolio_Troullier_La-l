@@ -2,11 +2,11 @@ import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 /*
- * ブログ記事コレクション。frontmatter は型付きで検証される。
- * 記事は src/content/blog/ に .md / .mdx で追加する（テーマ利用者のコンテンツ領域）。
+ * Projets collection. Frontmatter is validated against this schema.
+ * Add Markdown/MDX content under src/content/projets/.
  */
-const blog = defineCollection({
-	loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
+const projets = defineCollection({
+	loader: glob({ base: './src/content/projets', pattern: '**/*.{md,mdx}' }),
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
@@ -17,17 +17,17 @@ const blog = defineCollection({
 			author: z.string().optional(),
 			/** true の記事は本番ビルドで一覧・詳細から除外される */
 			draft: z.boolean().default(false),
-			/** アイキャッチ画像（任意）。src/content/blog からの相対パス */
+			/** Optional hero image, relative to src/content/projets. */
 			heroImage: image().optional(),
 		}),
 });
 
 /*
- * ポートフォリオ（プロジェクト）コレクション。本文はケーススタディ。
- * src/content/work/ に .md / .mdx で追加する。
+ * Experiences collection. Content bodies are case studies.
+ * Add Markdown/MDX content under src/content/experiences/.
  */
-const work = defineCollection({
-	loader: glob({ base: './src/content/work', pattern: '**/*.{md,mdx}' }),
+const experiences = defineCollection({
+	loader: glob({ base: './src/content/experiences', pattern: '**/*.{md,mdx}' }),
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
@@ -51,4 +51,4 @@ const work = defineCollection({
 		}),
 });
 
-export const collections = { blog, work };
+export const collections = { projets, experiences };
