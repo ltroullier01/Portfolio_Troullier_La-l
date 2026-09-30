@@ -1,6 +1,5 @@
 ---
 import type { Post } from '../../lib/posts';
-import { readingTime } from '../../lib/posts';
 
 interface Props {
     post: Post;
@@ -11,8 +10,7 @@ interface Props {
 const { post, index = 0 } = Astro.props;
 const { title, description, pubDate } = post.data;
 
-const minutes = readingTime(post.body);
-const dateLabel = pubDate.toLocaleDateString('en-US', {
+const dateLabel = pubDate.toLocaleDateString('fr-FR', {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
@@ -24,7 +22,7 @@ const tilt = index % 2 === 0 ? '-rotate-[1.5deg]' : 'rotate-[1.5deg]';
 
 <article
     class:list={[
-        'group relative flex flex-col rounded-card border-2 border-ink bg-cloud p-6 shadow-pop transition-[transform,box-shadow] duration-200 hover:rotate-0 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-pop-lg',
+        'group relative flex flex-col rounded-card border-2 border-ink bg-cloud p-6 shadow-[5px_5px_0_0_#f97316] transition-[transform,box-shadow] duration-200 hover:rotate-0 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[7px_7px_0_0_#f97316]',
         tilt,
     ]}
 >

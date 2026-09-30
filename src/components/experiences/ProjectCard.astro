@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import type { Project } from '../../lib/projects';
 
 interface Props {
@@ -8,7 +7,7 @@ interface Props {
 }
 
 const { project, index = 0 } = Astro.props;
-const { title, description, tech = [], year, thumbnail } = project.data;
+const { title, description, year, thumbnail } = project.data;
 
 // Arrière-plans par défaut thème sombre / orange
 const themes = [
@@ -20,6 +19,9 @@ const bg = themes[index % themes.length];
 const monogram = title.charAt(0).toUpperCase();
 
 const projectUrl = `/experiences/${project.id}`;
+
+// Résout la source qu'il s'agisse d'un chemin texte ("public/...") ou d'un objet ImageMetadata
+const imageSrc = typeof thumbnail === 'string' ? thumbnail : (thumbnail as any)?.src;
 ---
 
 <article
@@ -28,10 +30,11 @@ const projectUrl = `/experiences/${project.id}`;
     <!-- Vignette / Image -->
     <div class="relative aspect-[16/10] overflow-hidden border-b border-neutral-800 bg-neutral-900">
         {
-            thumbnail ? (
-                <Image
-                    src={thumbnail}
+            imageSrc ? (
+                <img
+                    src={imageSrc}
                     alt={title}
+                    loading="lazy"
                     class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                 />
             ) : (
@@ -70,18 +73,5 @@ const projectUrl = `/experiences/${project.id}`;
         <p class="mt-2.5 flex-1 text-sm leading-relaxed text-neutral-400">
             {description}
         </p>
-
-        <!-- Tags / Technologies -->
-        {
-            tech.length > 0 && (
-                <div class="mt-5 flex flex-wrap gap-1.5 pt-2 border-t border-neutral-800/80">
-                    {tech.slice(0, 4).map((t) => (
-                        <span class="rounded-md border border-neutral-700/60 bg-neutral-800/80 px-2 py-0.5 font-mono text-[11px] font-medium text-neutral-300">
-                            {t}
-                        </span>
-                    ))}
-                </div>
-            )
-        }
     </div>
 </article>

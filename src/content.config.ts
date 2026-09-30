@@ -33,7 +33,7 @@ const experiences = defineCollection({
 			title: z.string(),
 			description: z.string(),
 			/** フィルタに使う主カテゴリ */
-			category: z.string(),
+			category: z.string().optional(),
 			/** 使用技術・スタック */
 			tech: z.array(z.string()).default([]),
 			year: z.number(),

@@ -6,26 +6,17 @@ tags: ['Design']
 author: 'Kepler Team'
 ---
 
-Most theme palettes drift. A blue here, a teal there, a stray purple for the
-"premium" tier — and before long the interface feels like a swatch book. Kepler
-takes the opposite stance: **two hues, and no third.**
+Projet mené en binôme dans le cadre du cursus de génie électrique (GE2) à l'INSA Strasbourg. L'objectif était de redonner vie à un flipper non fonctionnel en appliquant une démarche d'ingénierie complète : diagnostic systématique des pannes, réfection de l'électronique de puissance, fiabilisation de la logique de commande et rénovation mécanique du plateau de jeu.
 
-## The rule
+---
 
-Navy carries structure — headings, dark sections, the sticky nav. Orange carries
-energy — calls to action, highlights, the eyebrow labels. Everything else is a
-warm neutral built from off-white paper and ink.
+### Interventions techniques
 
-1. Navy `#1e3a8a` for trust and structure
-2. Orange `#f97316` for action and accent
-3. Warm neutrals for everything in between
+- **Alimentation & puissance :** diagnostic des courts-circuits sur les schémas d'époque, fiabilisation des rails logiques (+5 V) et solénoïdes (+48 V).
+- **Commande & actionneurs :** remplacement du systeme de commande par une Arduino Uno pilotant des relais de puissances pour alimenter les bobines.
+- **Matrice de détection :** réparation des pistes coupées, fiabilisation de la matrice de contacts et désoxydation des contacts.
+- **Plateau & mécanique :** démontage complet, remplacement des ressorts de rappel et montage d'un kit de caoutchoucs neufs.
 
-## Why constraints help
+### Résultat
 
-A tight palette makes decisions faster. When there are only two accent colors,
-you never agonize over which one to use — the context decides. It also makes the
-theme trivial to rebrand: swap the two hues and the entire site follows.
-
-The signature move is the **hard-offset shadow** — a solid `6px 6px 0` block with
-no blur. It gives cards a confident, sticker-like weight that a soft drop shadow
-never could.
+Machine intégralement restaurée, fiabilisée sur le plan électrique et remise en exploitation avec toute sa dynamique de jeu d'origine.
