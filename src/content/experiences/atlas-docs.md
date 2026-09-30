@@ -1,7 +1,7 @@
 ---
 title: 'Atlas Docs'
 description: 'A documentation site with instant search and a reading experience that respects your time.'
-thumbnail: "/images/logo_adtp.png"
+thumbnail: "/images/logo_adtp.png" 
 category: 'Web App'
 tech: ['Astro', 'Pagefind', 'MDX']
 year: 2023

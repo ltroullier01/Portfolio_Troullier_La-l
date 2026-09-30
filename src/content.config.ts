@@ -41,9 +41,9 @@ const experiences = defineCollection({
 			client: z.string().optional(),
 			/** 公開サイト・リポジトリ（任意） */
 			url: z.string().url().optional(),
-			repo: z.string().url().optional(),
+			repo: z.string().url().optional(), 
 			/** サムネイル（任意）。無い場合はグラデーションのプレースホルダを表示 */
-			thumbnail: image().optional(),
+			thumbnail: z.string().optional(),
 			featured: z.boolean().default(false),
 			/** 並び順（小さいほど前）。同値は year の新しい順 */
 			order: z.number().default(0),
