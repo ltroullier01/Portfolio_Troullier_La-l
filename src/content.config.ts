@@ -38,7 +38,7 @@ const experiences = defineCollection({
 			tech: z.array(z.string()).default([]),
 			year: z.number(),
 			role: z.string().optional(),
-			client: z.string().optional(),
+			client: z.string().optional(), 
 			/** 公開サイト・リポジトリ（任意） */
 			url: z.string().url().optional(),
 			repo: z.string().url().optional(), 
