@@ -3,7 +3,7 @@ title: 'Chambre connectée'
 description: 'Domotisation de ma chambre '
 pubDate: 2026-08-01
 author: 'Laël Troullier'
-draft: true
+draft: false
 ---
 
 This post is a **draft**. It is visible while running `pnpm dev` but excluded
