@@ -6,7 +6,7 @@
 export const site = {
   name: 'Laël Troullier',
   author: 'Laël Troullier',
-  postsPerPage: 6,
+  postsPerPage: 9,
   title: 'Laël Troullier — Ingénieur Génie Électrique & Systèmes Embarqués',
   titleTemplate: '%s | Laël Troullier',
   description: 'Portfolio de projets et expériences en systèmes embarqués, IoT et génie électrique.',

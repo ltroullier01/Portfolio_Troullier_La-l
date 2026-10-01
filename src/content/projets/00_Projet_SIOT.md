@@ -1,8 +1,9 @@
 ---
 title: 'Robot Holonome'
-description: 'BLABLABALBA'
+description: 'P'
 pubDate: 2027-01-22
 author: 'Troullier Laël'
+image: "/images/adtp/verrine.jpg"
 ---
 
 Kepler is a starter theme for [Astro](https://astro.build) built around a single

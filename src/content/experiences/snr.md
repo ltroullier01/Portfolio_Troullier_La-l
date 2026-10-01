@@ -11,23 +11,11 @@ url: 'https://example.com'
 order: 3
 ---
 
-## Overview
+## Sujet du stage
 
-Meridian sells a small, considered catalog and wanted a storefront that felt as
-crafted as the products. Speed was the brief, and speed was the deliverable.
+En immersion au sein de l’unité de fabrication des corps roulants pour l'aéronautique, j’ai assuré le pilotage en autonomie d'une machine de rectification (rectification de faces bombées sur rouleaux) en rythme d'équipe 2x8. J'ai également réalisé les contrôles qualité dimensionnels au micron près, participé aux changements d'outillage/meule, et découvert l'ensemble des processus de fabrication de haute précision ainsi que les exigences strictes de sécurité et de conformité du secteur aéronautique.
 
-## The challenge
-
-Their previous platform shipped megabytes of JavaScript to render a product grid.
-Pages felt sluggish on exactly the mobile connections their customers used.
-
-## Approach
-
-- Rebuilt on Astro with static product pages and a tiny cart island
-- Deferred all non-critical scripts; the catalog is pure HTML and CSS
-- Moved checkout to a hosted Stripe flow to keep the bundle lean
-
-## Outcome
-
-Median page weight fell by 80%, and the store now scores in the high 90s on
-Lighthouse across the board.
+## Compétences développées
+- Contrôle qualité et métrologie : Mesure et contrôle dimensionnel au micron via comparateur/étalon et contrôle visuel   
+- Lecture de plans et rigueur technique : Interprétation de dossiers de fabrication et respect strict des tolérances micrométriques aéronautiques.
+- Adaptabilité & travail en équipe : Intégration rapide en atelier de production et travail en rythme posté (2×8). 

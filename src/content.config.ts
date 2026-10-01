@@ -19,6 +19,7 @@ const projets = defineCollection({
 			draft: z.boolean().default(false),
 			/** Optional hero image, relative to src/content/projets. */
 			heroImage: image().optional(),
+			image: z.string().optional(),
 		}),
 });
 
@@ -48,6 +49,7 @@ const experiences = defineCollection({
 			/** 並び順（小さいほど前）。同値は year の新しい順 */
 			order: z.number().default(0),
 			draft: z.boolean().default(false),
+			image: z.string().optional(),
 		}),
 });
 

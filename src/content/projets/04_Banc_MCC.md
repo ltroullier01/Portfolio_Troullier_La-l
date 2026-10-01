@@ -1,27 +1,30 @@
 ---
 title: 'Banc d’asservissement d’une MCC'
-description: 'BLABLABLA'
+description: 'Projet académique de 3ème année'
 pubDate: 2025-12-20
 author: 'Troullier Laël'
+image: "/images/projets/MCC.png"
 ---
 
-Speed is a feature. A theme that looks great but loads slowly still loses. Kepler
-leans on Astro's architecture to stay fast without any tuning on your part.
+Conception, modélisation et réalisation matérielle complète d'une carte de commande analogique dédiée à l'asservissement en cascade d'une machine à courant continu entraînant une charge (boucle interne de courant et boucle externe de vitesse). Après une modélisation théorique et une validation croisée sous MATLAB/Simulink et PSIM, notre équipe a dimensionné les composants discrets (AOP, filtres, correcteurs PI, limiteur de tension à diodes, conditionnement de capteurs), conçu et routé le PCB intégrant les composants CMS/traversants, puis modélisé un boîtier sur mesure. Les bancs d’essais finaux ont validé les performances réelles avec deux types de capteurs (dynamo tachymétrique et codeur incrémental), en respectant parfaitement le cahier des charges.
 
-## Zero JavaScript by default
+<div class="my-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <img 
+    src="/images/projets/MCC_1.jpeg" 
+    alt="Description première image" 
+    class="w-full aspect-[4/3] rounded-lg border border-neutral-700/80 object-cover" 
+  />
+  <img 
+    src="/images/projets/MCC_2.jpeg" 
+    alt="Description seconde image" 
+    class="w-full aspect-[4/3] rounded-lg border border-neutral-700/80 object-cover" 
+  />
+</div>
 
-Astro renders components to HTML at build time and ships **no client-side
-JavaScript** unless you explicitly ask for it. Kepler's interactions — the FAQ
-accordion, the pricing toggle — are a few lines of vanilla `<script>`, not a
-framework runtime.
+## Compétences développées :
 
-## What that buys you
-
-- Faster first paint, because there is no hydration to wait on
-- Smaller bundles, because there is no framework to download
-- Better Core Web Vitals, more or less for free
-
-## Measure, do not guess
-
-When you do add interactivity, add it island by island and measure the cost.
-The best-performing script is the one you never shipped.
+- Automatique & Régulation : Modélisation de systèmes dynamiques, conception de boucles d'asservissement en cascade et réglage de correcteurs PI selon des critères stricts de stabilité, temps de réponse et dépassement. 
+- Modélisation & Simulation : Validation croisée systématique entre MATLAB/Simulink et PSIM
+- Électronique analogique & Traitement du signal : Dimensionnement de circuits à amplificateurs opérationnels (soustracteurs, intégrateurs PI, suiveurs, écrêteurs à diodes/seuil réglable)   
+- Conception & Fabrication de circuits imprimés : Routage de la carte de commande, assemblage et soudure   
+  Validation expérimentale & Métrologie : Utilisation d'oscilloscopes numériques (Keysight) pour la mesure des régimes transitoires sur banc moteur/génératrice couplé et superposition fine entre mesures réelles et modèles simulés.   Gestion de projet & Travail en équipe : Planification globale des livrables via diagramme de Gantt, respect des jalons temporels et maîtrise des contraintes de coût (< 25 € / trinôme).
