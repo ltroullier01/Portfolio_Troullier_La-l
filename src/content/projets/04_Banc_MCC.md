@@ -23,8 +23,9 @@ Conception, modélisation et réalisation matérielle complète d'une carte de c
 
 ## Compétences développées :
 
-- Automatique & Régulation : Modélisation de systèmes dynamiques, conception de boucles d'asservissement en cascade et réglage de correcteurs PI selon des critères stricts de stabilité, temps de réponse et dépassement. 
-- Modélisation & Simulation : Validation croisée systématique entre MATLAB/Simulink et PSIM
-- Électronique analogique & Traitement du signal : Dimensionnement de circuits à amplificateurs opérationnels (soustracteurs, intégrateurs PI, suiveurs, écrêteurs à diodes/seuil réglable)   
-- Conception & Fabrication de circuits imprimés : Routage de la carte de commande, assemblage et soudure   
-  Validation expérimentale & Métrologie : Utilisation d'oscilloscopes numériques (Keysight) pour la mesure des régimes transitoires sur banc moteur/génératrice couplé et superposition fine entre mesures réelles et modèles simulés.   Gestion de projet & Travail en équipe : Planification globale des livrables via diagramme de Gantt, respect des jalons temporels et maîtrise des contraintes de coût (< 25 € / trinôme).
+- **Automatique & Régulation** : Modélisation de systèmes dynamiques, conception de boucles d'asservissement en cascade et réglage de correcteurs PI selon des critères stricts de stabilité, temps de réponse et dépassement
+- **Modélisation & Simulation** : Validation croisée systématique entre MATLAB/Simulink et PSIM
+- **Électronique analogique**: Dimensionnement de circuits à amplificateurs opérationnels (soustracteurs, intégrateurs PI, suiveurs, écrêteurs à diodes/seuil réglable)   
+- **Conception & Fabrication de circuits imprimés** : Routage de la carte de commande, assemblage et soudure   
+- **Validation expérimentale** : Utilisation d'oscilloscopes numériques pour la mesure des régimes transitoires sur banc moteur/génératrice couplé et superposition fine entre mesures réelles et modèles simulés
+- **Gestion de projet & Travail en équipe** : Planification globale des livrables via diagramme de Gantt, respect des jalons temporels et maîtrise des contraintes de coût

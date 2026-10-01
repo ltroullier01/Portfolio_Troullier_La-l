@@ -47,11 +47,11 @@ const updatedLabel = updatedDate?.toLocaleDateString('fr-FR', {
                 </a>
 
                 <h1
-                    class="mt-4 text-[clamp(2rem,5vw,3rem)] font-bold leading-[1.08] tracking-[-0.02em] text-ink"
+                    class="mt-4 text-[clamp(2rem,5vw,3rem)] font-bold leading-[1.08] tracking-[-0.02em] !text-neutral-900"
                 >
                     {title}
                 </h1>
-                <p class="mt-4 text-lg text-ink/70">{description}</p>
+                <p class="mt-4 text-lg text-neutral-600">{description}</p>
 
                 <div class="mt-6 flex flex-wrap items-center gap-2 text-sm font-semibold text-ink/55">
                     <span>{author ?? site.author}</span>
@@ -73,6 +73,23 @@ const updatedLabel = updatedDate?.toLocaleDateString('fr-FR', {
             <slot />
         </div>
     </article>
-
-    
 </BaseLayout>
+
+<style is:global>
+    /* Justification propre et césure des paragraphes ET des listes à puces */
+    article .prose p,
+    article .prose li {
+        text-align: justify !important;
+        text-justify: inter-word;
+        hyphens: auto;
+    }
+
+    /* Titres et textes en gras en noir neutre */
+    article .prose h1,
+    article .prose h2,
+    article .prose h3,
+    article .prose h4,
+    article .prose strong {
+        color: #171717 !important;
+    }
+</style>
