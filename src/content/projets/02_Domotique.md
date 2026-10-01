@@ -6,7 +6,7 @@ author: 'Laël Troullier'
 image: "/images/projets/Logo.png"
 ---
 
-Conception et déploiement d'une infrastructure IoT complète dédiée au monitoring environnemental (qualité de l'air, $\text{CO}_2$, humidité, températures, luminosité) et à la gestion d'automatismes domestiques. Le système repose sur un nœud d'acquisition à base d'ESP32 transmettant les flux de télémétrie via le protocole léger MQTT vers une passerelle locale sous Raspberry Pi. Le middleware événementiel sous Node-RED assure le parsing des trames, le routage logique et la persistance des séries temporelles dans une base de données relationnelle SQLite. L'exploitation et l'analyse des données sont centralisées sur une application Android développée de A à Z pour accéder aux informations de n'importe où.
+Conception et déploiement d'une infrastructure IoT complète dédiée au monitoring environnemental (qualité de l'air, CO2, humidité, températures, luminosité) et à la gestion d'automatismes domestiques. Le système repose sur un nœud d'acquisition à base d'ESP32 transmettant les flux de télémétrie via le protocole léger MQTT vers une passerelle locale sous Raspberry Pi. Le middleware événementiel sous Node-RED assure le parsing des trames, le routage logique et la persistance des séries temporelles dans une base de données relationnelle SQLite. L'exploitation et l'analyse des données sont centralisées sur une application Android développée de A à Z pour accéder aux informations de n'importe où.
 Cette installation permet de :
 - Piloter le volet électrique (manuellement ou automatiquement)
 - Gérer l'éclairage d'un bandeau LED
