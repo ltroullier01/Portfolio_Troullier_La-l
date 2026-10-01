@@ -1,9 +1,10 @@
 ---
-title: 'Meridian Store'
-description: 'A headless storefront tuned for speed, with sub-second navigation on every page.'
+title: 'Stage Ouvrier - NTN-SNR'
+description: 'Découverte et travail dans une unité de fabrication de pièces de précision'
+thumbnail: "/images/logo_snr.png"
 category: 'Website'
 tech: ['Astro', 'Tailwind', 'Stripe', 'Cloudflare']
-year: 2025
+year: 2023
 role: 'Frontend'
 client: 'Meridian'
 url: 'https://example.com'

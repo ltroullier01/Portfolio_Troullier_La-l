@@ -30,19 +30,19 @@ const { title, description, year } = project.data;
                     )
                 }
 
-                <h1 class="mt-3 text-[clamp(2rem,5vw,3.1rem)] font-bold leading-[1.06] tracking-[-0.02em] text-ink">
-                    {title}
+                <!-- Titre principal forcé en noir profond -->
+                <h1 class="text-4xl font-bold !text-neutral-900 md:text-5xl">
+                    {project.data.title}
                 </h1>
-                <p class="mt-4 max-w-[640px] text-lg text-ink/70">{description}</p>
+                <p class="mt-4 max-w-[640px] text-lg text-neutral-600">{description}</p>
             </div>
         </header>
 
         <div class="mx-auto max-w-[860px] px-6 py-12">
-            <div class="prose max-w-none">
+            <!-- Forçage de tous les titres Markdown (##, ###) en noir neutre -->
+            <div class="prose max-w-none prose-headings:!text-neutral-900 prose-p:text-neutral-800">
                 <slot />
             </div>
         </div>
     </article>
-
-    
-</BaseLayout> 
+</BaseLayout>
