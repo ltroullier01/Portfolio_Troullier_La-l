@@ -1,6 +1,6 @@
 ---
 title: 'Banc d’asservissement d’une MCC'
-description: 'Projet académique de 3ème année'
+description: 'Projet académique de 4ème année'
 pubDate: 2025-12-20
 author: 'Troullier Laël'
 image: "/images/projets/MCC.png"
